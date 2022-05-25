@@ -18,22 +18,37 @@ ul
 {
     position: relative;
     transform: skewY(-15deg);
+    z-index: 1;
     
 }
+
+/**********présentation********/
 ul li 
 {
     position: relative;
     list-style: none;
-    width: 200px;
+    width: 400px;
+    height: 50px;
     background: #904e95;
     padding: 15px;
     z-index: var(--i);
-    transition: 0.5s;
+    transition: 0.3s ease-in-out ;
 }
 ul li:hover
 {
-    background:#4ca1af;
+    background: #30E8BF;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #FF8235, #30E8BF);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #FF8235, #30E8BF); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    box-shadow: 10px -5px 50px #FF8235;
     transform: translateX(-50px);
+    text-align: center;
+    align-items: center;
+    font-size: 2em;
+
+}
+ul li a:hover
+{
+    text-align: center;
 }
 ul li::before
 {
@@ -46,10 +61,14 @@ ul li::before
     background: #8e5692;
     transform-origin: right;
     transform: skewY(45deg);
+    transition: 0.3s ease-in-out;
 }
 ul li:hover::before
 {
-    background: #4ca1af;
+    background: #30E8BF;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #FF8235, #30E8BF);  /* Chrome 10-25, Safari 5.1-6 */
+    background: #FF8235; /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    box-shadow: 10px -5px 50px #FF8235, -5px 0 50px #FF8265;
 }
 ul li::after
 {
@@ -62,10 +81,14 @@ ul li::after
     background: #8f3995;
     transform-origin: bottom;
     transform: skewX(45deg);
+    transition: 0.3s ease-in-out;
 }
 ul li:hover::after
 {
-    background: #4ca1af;
+    background: #30E8BF;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #FF8235, #30E8BF);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #FF8235, #30E8BF); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    box-shadow: 10px -5px 50px #FF8235;
 }
 ul li a
 {
@@ -83,5 +106,174 @@ ul li:hover a
 }
 ul li:last-child::after
 {
-    box-shadow: -100px 100px 20px rgba(0,0,0,0.25);
+    box-shadow: -150px 150px 40px 30px rgba(0,0,0,0.25);
+}
+
+/*popup*/
+
+.popup4
+{
+    position: absolute;
+    top:50%;
+    bottom: 0;
+    left: 50%;
+    right: 0;
+    transform: translate(-50%,-50%);
+    background: antiquewhite;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 1000px;
+    height: 650px;
+    border-radius: 8px;
+    visibility: hidden;
+    opacity:0;
+    transition: .5s;
+    z-index: 2;
+}
+
+.popup4:target
+{
+    visibility: visible;
+    opacity: 1;
+    
+}
+.popup4_content
+{
+    background-color: #2dd54e;
+    width: 100vh;
+    max-width: 90%;
+}
+.popup_close
+{
+    position: absolute;
+    right: 15px;
+    top:15px;
+    text-decoration: none;
+    color: grey;
+}
+
+.popup3
+{
+    position: absolute;
+    top:50%;
+    bottom: 0;
+    left: 50%;
+    right: 0;
+    transform: translate(-50%,-50%);
+    background: antiquewhite;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 1000px;
+    height: 650px;
+    border-radius: 8px;
+    visibility: hidden;
+    opacity:0;
+    transition: .5s;
+    z-index: 2;
+}
+
+.popup3:target
+{
+    visibility: visible;
+    opacity: 1;
+    
+}
+.popup3_content
+{
+    background-color: #2dd54e;
+    width: 100vh;
+    max-width: 90%;
+}
+.popup3:target
+{
+    visibility: visible;
+    opacity: 1;
+}
+.popup2
+{
+    position: absolute;
+    top:50%;
+    bottom: 0;
+    left: 50%;
+    right: 0;
+    transform: translate(-50%,-50%);
+    background: antiquewhite;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 1000px;
+    height: 650px;
+    border-radius: 8px;
+    visibility: hidden;
+    opacity:0;
+    transition: .5s;
+    z-index: 2;
+}
+
+.popup2:target
+{
+    visibility: visible;
+    opacity: 1;
+    
+}
+.popup2_content
+{
+    background-color: #2dd54e;
+    width: 100vh;
+    max-width: 90%;
+}
+.popup2:target
+{
+    visibility: visible;
+    opacity: 1;
+}
+.popup1
+{
+    position: absolute;
+    top:50%;
+    bottom: 0;
+    left: 50%;
+    right: 0;
+    transform: translate(-50%,-50%);
+    background: antiquewhite;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 1000px;
+    height: 650px;
+    border-radius: 8px;
+    visibility: hidden;
+    opacity:0;
+    transition: .5s;
+    z-index: 2;
+}
+
+.popup1:target
+{
+    visibility: visible;
+    opacity: 1;
+    
+}
+.popup1_content
+{
+    /*background-color: #2dd54e;*/
+    width: 100vh;
+    max-width: 90%;
+}
+.popup1:target
+{
+    visibility: visible;
+    opacity: 1;
+}
+
+
+/*présentation popup*/
+
+.popup1 .popup1_content h1 
+{ 
+    color: #FF8235;
+    z-index:3;
+    font-size: 3em;
 }
